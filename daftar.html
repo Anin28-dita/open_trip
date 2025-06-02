@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar - Open Trip</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="navbar">
+    <h1>Open Trip Explorer</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="daftar.html">Daftar</a>
+      <a href="login.html" id="loginBtn">Login</a>
+      <button id="logoutBtn" onclick="logout()">Logout</button>
+    </nav>
+  </div>
+
+  <body class="daftar-page">
+  <main class="center">
+    <h2>Daftar Sekarang</h2>
+    <p>Isi data dirimu lalu klik tombol untuk mendaftar via WhatsApp:</p>
+    <form id="daftarForm" class="form-container" onsubmit="kirimWhatsApp(event)">
+      <input type="text" id="nama" placeholder="Nama Lengkap" required />
+      <input type="text" id="telepon" placeholder="No. Telepon" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="tujuan" placeholder="Tujuan Trip (misal: Bali)" required />
+      <button type="submit">Daftar via WhatsApp</button>
+    </form>
+  </main>
+  </body>
+
+  <script>
+    function kirimWhatsApp(e) {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value;
+      const telepon = document.getElementById('telepon').value;
+      const email = document.getElementById('email').value;
+      const tujuan = document.getElementById('tujuan').value;
+      
+      const pesan = `Halo Admin, saya ingin daftar Open Trip.%0A%0ANama: ${nama}%0ANo. Telepon: ${telepon}%0AEmail: ${email}%0ATujuan Trip: ${tujuan}`;
+      const url = `https://wa.me/6282177820487?text=${pesan}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>

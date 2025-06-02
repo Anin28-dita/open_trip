@@ -1,0 +1,177 @@
+/* Import Transitional Font - Georgia (default browser transitional serif) */
+
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  background: #fff5e6;
+  color: #333;
+  text-align: center;
+}
+
+
+.navbar {
+  background: #fdf6f0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #e07a5f;
+}
+
+.navbar nav a,
+.navbar nav button {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #e07a5f;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.navbar nav a:hover,
+.navbar nav button:hover {
+  color: #333;
+}
+
+.navbar nav button {
+  background: #f25c54;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.hero {
+  height: 100vh; /* penuh layar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertikal center */
+  align-items: center;     /* horizontal center */
+  padding: 4rem 1rem;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') no-repeat center center;
+  background-size: 150%; /* zoom in background */
+  color: white;
+  position: relative;
+  text-align: center; /* supaya teks rata tengah */
+}
+
+/* overlay supaya teks tetap terbaca */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 0.5rem;
+  color: #e76f51;
+}
+
+.card p {
+  padding: 0 1rem 1rem;
+}
+
+.center {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+body.daftar-page {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* Supaya form tetap terbaca dan kontras */
+.form-container {
+  background: rgba(0, 0, 0, 0.6);
+  color: #e76f51;
+  box-shadow: none;
+}
+
+.btn-whatsapp,
+form button {
+  background: #2a9d8f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-whatsapp:hover,
+form button:hover {
+  background: #21867a;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fffdfc;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  
+}
+
+form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+form input:focus {
+  border-color: #e07a5f;
+  outline: none;
+}
